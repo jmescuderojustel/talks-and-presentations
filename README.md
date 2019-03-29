@@ -1,2 +1,3 @@
-# talks-and-presentations
-Repository for hosting materials and slides used in presentations
+# Talks and presentations
+
+In this repository, materials and slides about talks or presentations given will be added, for reference for the people interested.
