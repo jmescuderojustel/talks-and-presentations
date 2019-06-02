@@ -1,0 +1,22 @@
+$fonts-path: '../fonts';
+
+@font-face {
+    font-family: 'cssworkflow';
+    font-style: normal;
+    font-weight: normal;
+    src: url('#{$fonts-path}/icomoon/cssworkflow.ttf?teeki5') format('truetype'), url('#{$fonts-path}/icomoon/cssworkflow.woff?teeki5') format('woff'), url('#{$fonts-path}/icomoon/cssworkflow.svg?teeki5#cssworkflow') format('svg');
+}
+
+@font-face {
+    font-family: 'lato';
+    font-style: normal;
+    font-weight: normal;
+    src: url('#{$fonts-path}/lato/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lato';
+    font-style: normal;
+    font-weight: bold;
+    src: url('#{$fonts-path}/lato/Lato-Bold.ttf') format('truetype');
+}

@@ -1,0 +1,144 @@
+@import '../config/colors';
+@import '../config/other';
+
+$color-grid-text: $black;
+$color-grid-header-text: lighten($color-grid-text, 20%);
+$color-grid-selected: $color-main;
+$color-grid-border: 1px solid $grey-darker;
+$grid-row-height: 39px;
+
+/*
+
+@styleguide
+
+@title Block - .grid
+
+Use the grid class in a `div` element.
+
+<div class="grid">
+    <div class="grid__row grid__row--header">
+        <div class="grid__cell grid__cell--1 grid__cell--sorted grid__cell--sorted-up">Date</div>
+        <div class="grid__cell grid__cell--2">Event name</div>
+        <div class="grid__cell grid__cell--1">Customer</div>
+        <div class="grid__cell grid__cell--2">Where</div>
+        <div class="grid__cell grid__cell--1">Type</div>
+    </div>
+    <div class="grid__row">
+        <div class="grid__cell grid__cell--1">5/10/2017</div>
+        <div class="grid__cell grid__cell--2">Encuesta Rangreen</div>
+        <div class="grid__cell grid__cell--1">Rangreen</div>
+        <div class="grid__cell grid__cell--2">Calle Ledesma 10, Bilbao</div>
+        <div class="grid__cell grid__cell--1">Surveys</div>
+    </div>
+    <div class="grid__row grid__row--even">
+        <div class="grid__cell grid__cell--1">13/10/2017</div>
+        <div class="grid__cell grid__cell--2">Encuesta Ontomedia</div>
+        <div class="grid__cell grid__cell--1">Ontomedia</div>
+        <div class="grid__cell grid__cell--2">Calle Nervión 3, Bilbao</div>
+        <div class="grid__cell grid__cell--1">Surveys</div>
+    </div>
+    <div class="grid__row">
+        <div class="grid__cell grid__cell--1">13/10/2017</div>
+        <div class="grid__cell grid__cell--2">Visita Luis</div>
+        <div class="grid__cell grid__cell--1">Betasoloin</div>
+        <div class="grid__cell grid__cell--2">Calle Ledesma 10, Bilbao</div>
+        <div class="grid__cell grid__cell--1">Visits</div>
+    </div>
+</div>
+
+    <div class="grid">
+        <div class="grid__row grid__row--header">
+            <div class="grid__cell grid__cell--1 grid__cell--sorted grid__cell--sorted-up">Date</div>
+            <div class="grid__cell grid__cell--2">Event name</div>
+            <div class="grid__cell grid__cell--1">Customer</div>
+            <div class="grid__cell grid__cell--2">Where</div>
+            <div class="grid__cell grid__cell--1">Type</div>
+        </div>
+        <div class="grid__row">
+            <div class="grid__cell grid__cell--1">5/10/2017</div>
+            <div class="grid__cell grid__cell--2">Encuesta Rangreen</div>
+            <div class="grid__cell grid__cell--1">Rangreen</div>
+            <div class="grid__cell grid__cell--2">Calle Ledesma 10, Bilbao</div>
+            <div class="grid__cell grid__cell--1">Surveys</div>
+        </div>
+        <div class="grid__row grid__row--even">
+            <div class="grid__cell grid__cell--1">13/10/2017</div>
+            <div class="grid__cell grid__cell--2">Encuesta Ontomedia</div>
+            <div class="grid__cell grid__cell--1">Ontomedia</div>
+            <div class="grid__cell grid__cell--2">Calle Nervión 3, Bilbao</div>
+            <div class="grid__cell grid__cell--1">Surveys</div>
+        </div>
+        <div class="grid__row">
+            <div class="grid__cell grid__cell--1">13/10/2017</div>
+            <div class="grid__cell grid__cell--2">Visita Luis</div>
+            <div class="grid__cell grid__cell--1">Betasoloin</div>
+            <div class="grid__cell grid__cell--2">Calle Ledesma 10, Bilbao</div>
+            <div class="grid__cell grid__cell--1">Visits</div>
+        </div>
+    </div>
+*/
+
+.grid {
+    display: flex;
+    overflow: hidden;
+    background: $white;
+    border: $color-grid-border;
+    border-radius: $border-radius;
+    flex-direction: column;
+    justify-content: flex-start;    
+}
+
+.grid__row {
+    display: flex;
+    height: $grid-row-height;
+    background: $grey-light;
+    align-content: flex-start;
+    flex-direction: row;
+
+    &--header {
+        color: $color-grid-header-text;
+        background: $white;
+    }
+
+    &--even {
+        background: $white;
+    }
+
+    &:not(:first-child) {
+        border-top: $color-grid-border;
+    }
+}
+
+.grid__cell {
+    padding: 0 10px;
+    overflow: hidden;
+    line-height: $grid-row-height;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &--1 {
+        flex: 1;
+    }
+
+    &--2 {
+        flex: 2;
+    }
+
+    &--sorted {
+        color: $color-grid-selected;
+
+        &-up {
+            &::after {
+                margin-left: 10px;
+                content: '▲';
+            }
+        }
+
+        &-down {
+            &::after {
+                margin-left: 10px;
+                content: '▼';
+            }
+        }
+    }
+}

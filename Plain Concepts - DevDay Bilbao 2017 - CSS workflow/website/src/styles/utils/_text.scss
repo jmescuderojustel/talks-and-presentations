@@ -1,0 +1,97 @@
+/*
+
+@styleguide
+
+@title Util - text
+
+<style>
+.psg-box {
+    padding: 5px;
+}
+</style>
+
+Use the `text` utility classes on any element
+
+<h3 class="psg-subsection">Align</h3>
+
+<div class="u-text--left psg-box">left</div>
+
+    <div class="u-text--left">left</div>
+
+<div class="u-text--center psg-box">center</div>
+
+    <div class="u-text--center">center</div>
+
+<div class="u-text--right psg-box">right</div>
+
+    <div class="u-text--right">right</div>
+
+<h3 class="psg-subsection">Font size</h3>
+
+<div class="u-text--smaller psg-box">smaller</div>
+
+    <div class="u-text--smaller">smaller</div>
+
+<div class="u-text--larger psg-box">larger</div>
+
+    <div class="u-text--larger">larger</div>
+
+<h3 class="psg-subsection">Font weight</h3>
+
+<div class="u-text--normal psg-box">normal</div>
+
+    <div class="u-text--normal">normal</div>
+
+<div class="u-text--semibold psg-box">semibold</div>
+
+    <div class="u-text--semibold">semibold</div>
+
+<div class="u-text--bold psg-box">bold</div>
+
+    <div class="u-text--bold">bold</div>
+
+<h3 class="psg-subsection">Others</h3>
+
+<div class="u-text--ellipsis psg-box">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+
+    <div class="u-text--ellipsis">ellipsis</div>
+
+*/
+
+.u-text--left {
+    text-align: left;
+}
+
+.u-text--center {
+    text-align: center;
+}
+
+.u-text--right {
+    text-align: right;
+}
+
+.u-text--smaller {
+    font-size: smaller;
+}
+
+.u-text--larger {
+    font-size: larger;
+}
+
+.u-text--normal {
+    font-weight: 400;
+}
+
+.u-text--semibold {
+    font-weight: 500;
+}
+
+.u-text--bold {
+    font-weight: 700;
+}
+
+.u-text--ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -1,0 +1,65 @@
+@import '../config/colors';
+@import '../config/other';
+
+/*
+@styleguide
+
+@title Block - .radio
+
+Use the radio class on a wrapper containing a `radio` element.
+
+<div class="radio">
+    <input type="radio" id="radio-1" name="radio" class="radio__button" >
+    <label for="radio-1" class="radio__label">radio 1</label>
+</div>
+
+<div class="radio">
+    <input type="radio" id="radio-2" name="radio" class="radio__button" >
+    <label for="radio-2" class="radio__label">radio 2</label>
+</div>
+
+<div class="radio">
+    <input type="radio" id="radio-3" name="radio" class="radio__button" checked>
+    <label for="radio-3" class="radio__label">radio 3</label>
+</div>
+
+<div class="radio">
+    <input type="radio" id="radio-3" name="radio" class="radio__button" disabled>
+    <label for="radio-3" class="radio__label">radio 3</label>
+</div>
+
+    <div class="radio">
+        <input type="radio" class="radio__button">
+        <label class="radio__label">description</label>
+    </div>
+
+*/
+
+.radio {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    & + & {
+        margin-top: 20px;
+    }
+}
+
+.radio__button {
+    position: relative;
+    cursor: pointer;
+    border: $border;
+    border-radius: 50%;
+
+    &:focus {
+        outline: none;
+    }
+
+    .radio--error & {
+        border-color: $color-error;
+    }
+}
+
+.radio__label {
+    padding-left: 15px;
+}

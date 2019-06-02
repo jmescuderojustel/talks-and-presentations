@@ -1,0 +1,9 @@
+@import './colors';
+@import './sizes';
+
+$disabled-opacity: .4;
+
+$border: $size-border-width solid $color-border;
+$border-light: $size-border-width solid $color-border-light;
+
+$border-radius: 5px;

@@ -1,0 +1,16 @@
+@import '../config/colors';
+@import '../config/other';
+
+.title {
+    margin: 20px 0;
+    font-size: 32px;
+    font-weight: normal;
+    color: $color-text;
+    text-transform: uppercase;
+    border-bottom: $border;
+
+    &--secundary {        
+        font-size: 18px;
+    }
+}
+

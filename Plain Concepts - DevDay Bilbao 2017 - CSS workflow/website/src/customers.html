@@ -1,0 +1,219 @@
+<html>
+
+<head>
+    <title>CSS Workflow Demo - Website</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__navigation">
+            <nav class="navigation">
+
+                <a href="#">
+                    <i class="icon icon--menu"></i>
+                </a>
+
+                <ul class="navigation__items">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">
+                            <i class="icon icon--equalizer"></i>
+                            <span class="navigation__link-name">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link navigation__link--active" href="#">
+                            <i class="icon icon--address-book icon--active"></i>
+                            <span class="navigation__link-name">Customers</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">
+                            <i class="icon icon--user-plus"></i>
+                            <span class="navigation__link-name">Create customer</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="index.html">
+                            <i class="icon icon--calendar"></i>
+                            <span class="navigation__link-name">Planning</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container__main">
+            <header class="header">
+
+                <span class="header__title">Globex corporation</span>
+
+                <div class="header__searcher">
+
+                    <form class="searcher">
+
+                        <div class="searcher__input-container form__group">
+                            <label class="form__group-addon" for="search">Search by:</label>
+                            <input class="input form__group-input" id="search" type="text" placeholder="entity, code, customer or country" autocomplete="off"
+                            />
+                        </div>
+
+                        <button class="button searcher__button" type="submit">Advance</button>
+                    </form>
+
+                </div>
+
+
+                <div class="header__user">
+                    <span class="header__user-name">Hi, Jes&uacute;s Mar&iacute;a</span>
+                    <div class="header__user-icon">
+                        <i class="icon icon--inverted icon--user"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="container__page">
+
+                <h1 class="title">ACME CORPORATION</h2>
+
+                    <ul class="tab u-mt--50">
+                        <li class="tab__option tab__option--active">
+                            <a class="tab__link" href="#">Info</a>
+                        </li>
+                        <li class="tab__option">
+                            <a class="tab__link" href="#">Contact</a>
+                        </li>
+                        <li class="tab__option">
+                            <a class="tab__link" href="#">Additional info</a>
+                        </li>
+                    </ul>
+
+                    <h2 class="title title--secundary">COMMERCIALS</h2>
+
+                    <div class="u-flx--horizontal u-flx--space-between">
+                        <article class="comercial u-flx--grow">
+                            <header class="comercial__header">
+                                <div class="comercial__avatar">
+                                    <i class="icon icon--user"></i>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Commercial</div>
+                                    <div class="comercial__value">Luis Iglesias</div>
+                                </div>
+                            </header>
+                            <div class="comercial__content">
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Company</div>
+                                    <div class="comercial__value">Acme Coporation</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Office</div>
+                                    <div class="comercial__value">Bilbao</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Position</div>
+                                    <div class="comercial__value">Internal Sales</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Date</div>
+                                    <div class="comercial__value">17/mar/2016</div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="comercial u-flx--grow">
+                            <header class="comercial__header">
+                                <div class="comercial__avatar">
+                                    <i class="icon icon--user"></i>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Commercial</div>
+                                    <div class="comercial__value">Julina Rojas</div>
+                                </div>
+                            </header>
+                            <div class="comercial__content">
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Company</div>
+                                    <div class="comercial__value">Acme Coporation</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Office</div>
+                                    <div class="comercial__value">Vitoria</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Position</div>
+                                    <div class="comercial__value">Internal Sales</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Date</div>
+                                    <div class="comercial__value">9/mar/2015</div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="comercial u-flx--grow">
+                            <header class="comercial__header">
+                                <div class="comercial__avatar">
+                                    <i class="icon icon--user"></i>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Commercial</div>
+                                    <div class="comercial__value">Angela Per</div>
+                                </div>
+                            </header>
+                            <div class="comercial__content">
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Company</div>
+                                    <div class="comercial__value">Acme Coporation</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Office</div>
+                                    <div class="comercial__value">Erandio</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Position</div>
+                                    <div class="comercial__value">Internal Sales</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Date</div>
+                                    <div class="comercial__value">12/May/2016</div>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="comercial u-flx--grow">
+                            <header class="comercial__header">
+                                <div class="comercial__avatar">
+                                    <i class="icon icon--user"></i>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Commercial</div>
+                                    <div class="comercial__value">Laura Maza</div>
+                                </div>
+                            </header>
+                            <div class="comercial__content">
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Company</div>
+                                    <div class="comercial__value">Acme Coporation</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Office</div>
+                                    <div class="comercial__value">Vitoria</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Position</div>
+                                    <div class="comercial__value">Internal Sales</div>
+                                </div>
+                                <div class="comercial__info-item">
+                                    <div class="comercial__label">Date</div>
+                                    <div class="comercial__value">17/mar/2016</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+            </section>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

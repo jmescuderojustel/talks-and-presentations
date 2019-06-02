@@ -1,0 +1,45 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Demo application for the CSS Workflow talk in the Plain Concepts Bilbao Web Day",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "npm run dev:start && concurrently \"npm run dev:reload\" \"npm run dev:css\" \"npm run dev:assets\" \"npm run dev:lint\"",
+    "dev:start": "node-sass src/styles/main.scss .tmp/styles/styles.css && cpx \"src/**/*.{html,eot,ttf,woff,svg}\" \".tmp\"",
+    "dev:reload": "browser-sync start --server \".tmp\" --files \".tmp\" --no-notify",
+    "dev:css": "node-sass src/styles/main.scss .tmp/styles/styles.css --watch",
+    "dev:assets": "cpx \"src/**/*.{html,eot,ttf,woff,svg}\" \".tmp\" --watch",
+    "dev:lint": "onchange \"**/*.scss\" -- npm run lint",
+    "build": "npm run build:css && npm run build:assets",
+    "build:css": "mkdirp \"dist/styles\" && node-sass src/styles/main.scss | postcss --use autoprefixer | cssmin > dist/styles/styles.css",
+    "build:assets": "cpx \"src/**/*.{html,eot,ttf,woff,svg}\" \"dist\"",
+    "lint": "sass-lint --config .sass-lint.yml \"src/**/*.scss\" --verbose --max-warnings 0",
+    "styleguide": "npm run styleguide:css && npm run styleguide:assets && node scripts/styleguide",
+    "styleguide:css": "node-sass src/styles/styleguide.scss styleguide/styleguide.css",
+    "styleguide:assets": "cpx \"src/**/*.{eot,ttf,woff,svg}\" \"styleguide\""
+  },
+  "keywords": [
+    "CSS",
+    "workflow",
+    "Plain",
+    "Concepts"
+  ],
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "author": "Borja & Jesús María",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "7.1.5",
+    "browser-sync": "2.18.13",
+    "concurrently": "3.5.0",
+    "cpx": "1.5.0",
+    "cssmin": "0.4.3",
+    "mkdirp": "0.5.1",
+    "node-sass": "4.5.3",
+    "onchange": "3.2.1",
+    "postcss-cli": "4.1.1",
+    "postcss-style-guide": "jmescuderojustel/postcss-style-guide",
+    "sass-lint": "1.12.0"
+  }
+}

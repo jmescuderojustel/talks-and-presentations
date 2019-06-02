@@ -1,0 +1,24 @@
+{
+  "name": "browsersync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {    
+    "start": "node-sass src/styles/styles.scss src/styles/styles.css --watch --output-style expanded"
+  },
+  "scripts-01": {
+    "start": "concurrently \"npm run sass\" \"npm run browsersync\"",   
+    "sass": "node-sass src/styles/styles.scss src/styles/styles.css --watch",
+    "browsersync": "browser-sync start --server \"src\" --files \"src\" --reload-delay 200"   
+  },
+  "scripts-02": {
+    "start": "concurrently \"npm run sass\" \"npm run browsersync\"",   
+    "sass": "node-sass src/styles/styles.scss src/styles/styles.css --watch",
+    "browsersync": "browser-sync start --server \"src\" --files \"src\" --browser \"chrome\" \"chrome\" \"firefox\" \"iexplore\" --logLevel debug --reload-delay 200"    
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.13",
+    "node-sass": "4.5.3",
+    "concurrently": "3.5.0"
+  }
+}

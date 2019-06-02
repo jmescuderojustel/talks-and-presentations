@@ -1,0 +1,134 @@
+@import '../config/colors';
+@import '../config/sizes';
+@import '../config/other';
+
+$padding: 12px;
+
+/*
+
+@styleguide
+
+@title Block - .comercial
+
+Use the input class any element.
+
+<style>
+    .commercial {
+        width: 260px;    
+    }
+</style>
+
+<article class="comercial">
+    <header class="comercial__header">
+        <div class="comercial__avatar">
+            <i class="icon icon--user"></i>
+        </div>
+        <div class="comercial__info-item">
+            <div class="comercial__label">Commercial</div>
+            <div class="comercial__value">Luis Iglesias</div>
+        </div>
+    </header>
+    <div class="comercial__content">
+        <div class="comercial__info-item">
+            <div class="comercial__label">Company</div>
+            <div class="comercial__value">Acme Coporation</div>
+        </div>
+        <div class="comercial__info-item">
+            <div class="comercial__label">Office</div>
+            <div class="comercial__value">Bilbao</div>
+        </div>
+        <div class="comercial__info-item">
+            <div class="comercial__label">Position</div>
+            <div class="comercial__value">Internal Sales</div>
+        </div>
+    </div>
+</article>
+
+    <article class="comercial">
+        <header class="comercial__header">
+            <div class="comercial__avatar">
+                <i class="icon icon--user"></i>
+            </div>
+            <div class="comercial__info-item">
+                <div class="comercial__label">Commercial</div>
+                <div class="comercial__value">Luis Iglesias</div>
+            </div>
+        </header>
+        <div class="comercial__content">
+            <div class="comercial__info-item">
+                <div class="comercial__label">Company</div>
+                <div class="comercial__value">Acme Coporation</div>
+            </div>
+            <div class="comercial__info-item">
+                <div class="comercial__label">Office</div>
+                <div class="comercial__value">Bilbao</div>
+            </div>
+            <div class="comercial__info-item">
+                <div class="comercial__label">Position</div>
+                <div class="comercial__value">Internal Sales</div>
+            </div>
+        </div>
+    </article>
+
+*/
+
+.comercial {    
+    overflow: hidden;
+    border: $border; 
+    border-radius: $border-radius;
+
+    & + & {
+        margin-left: 10px;
+    }
+}
+
+.comercial__header {
+    display: flex;    
+    padding: $padding;
+    background: $grey-light;
+    border-bottom: $border;
+    align-items: center;
+}
+
+.comercial__avatar {
+    padding: 10px;
+    margin-right: 10px;
+    background: $color-border;
+    border: 2px solid $white;
+    border-radius: 50%;
+}
+
+.comercial__content {
+    background: $white;
+}
+
+.comercial__info-item {
+    padding: $padding;
+
+    &:not(:last-child) {
+        border-bottom: $border;        
+    }
+
+    .comercial__header > & {
+        border: 0;
+    }
+}
+
+.comercial__label {
+    margin-bottom: 4px;
+    font-size: smaller;
+    color: $grey-darkest;
+}
+
+@media only screen and (max-width: 1280px) {
+    
+    .comercial__avatar {
+        margin-right: 2px;
+    }
+
+    .comercial__header,
+    .comercial__info-item {
+        padding: 10px;
+    }
+
+}
