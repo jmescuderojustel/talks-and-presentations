@@ -1,0 +1,80 @@
+@import '../functions/offsets-generator-mixins';
+
+/*
+
+@styleguide
+
+@title Util - padding
+
+Use the `padding` utility classes on any container element
+
+<h3 class="psg-subsection">Padding all sides</h3>
+
+<div class="psg-box">
+    <p class="u-p--0">0px</p>
+</div>
+<div class="psg-box">
+    <p class="u-p--5">5px</p>
+</div>
+<div class="psg-box">
+    <p class="u-p--10">10px</p>
+</div>
+<div class="psg-box">
+    <p class="u-p--15">15px</p>
+</div>
+<div class="psg-box">
+    <p class="u-p--20">20px</p>
+</div>
+<div class="psg-box">
+    <p class="u-p--25">25px</p>
+</div>
+
+    <p class="u-p--0"></p>
+    <p class="u-p--5"></p>
+    <p class="u-p--10"></p>
+    <p class="u-p--15"></p>
+    <p class="u-p--20"></p>
+    <p class="u-p--25"></p>
+            ...
+    <p class="u-p--100"></p>
+
+<h3 class="psg-subsection">Padding one side</h3>
+
+<ul class="psg-list">
+    <li>u-pl--[size] for padding left</li>
+    <li>u-pr--[size] for padding right</li>
+    <li>u-pt--[size] for padding top</li>
+    <li>u-pb--[size] for padding bottom</li>
+</ul>
+
+<div class="psg-box">
+    <p class="u-pl--0">left 0px</p>
+</div>
+<div class="psg-box">
+    <p class="u-pl--5">left 5px</p>
+</div>
+<div class="psg-box">
+    <p class="u-pl--10">left 10px</p>
+</div>
+<div class="psg-box">
+    <p class="u-pl--15">left 15px</p>
+</div>
+<div class="psg-box">
+    <p class="u-pl--20">left 20px</p>
+</div>
+<div class="psg-box">
+    <p class="u-pl--25">left 25px</p>
+</div>
+
+    <p class="u-pl--0"></p>
+    <p class="u-pl--5"></p>
+    <p class="u-pl--10"></p>
+    <p class="u-pl--15"></p>
+    <p class="u-pl--20"></p>
+    <p class="u-pl--25"></p>
+        ...
+    <p class="u-pl--100"></p>
+
+*/
+
+@include offset-generator(padding, p, 100, 5);

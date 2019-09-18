@@ -1,0 +1,48 @@
+.u-flx--vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.u-flx--vertical-full {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.u-flx--horizontal {
+    display: flex;
+    align-items: center;
+    flex-direction: row;    
+}
+
+.u-flx--horizontal-full {
+    display: flex;
+    width: 100%;
+    height: 100%;    
+    flex-direction: row;
+}
+
+.u-flx--grow {
+    flex: 1;
+}
+
+.u-flx--center {
+    justify-content: center;
+}
+
+.u-flx--end {
+    justify-content: flex-end;
+}
+
+.u-flx--space-between {
+    justify-content: space-between;
+}
+
+.u-flx--align-start {
+    align-items: flex-start;
+}
+
+.u-flx--align-center {
+    align-items: center;
+}

@@ -1,0 +1,238 @@
+<html>
+
+<head>
+    <title>CSS Workflow Demo - Website</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__navigation">
+            <nav class="navigation">
+
+                <a href="#">
+                    <i class="icon icon--menu"></i>
+                </a>
+
+                <ul class="navigation__items">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">
+                            <i class="icon icon--equalizer"></i>
+                            <span class="navigation__link-name">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="customers.html">
+                            <i class="icon icon--address-book"></i>
+                            <span class="navigation__link-name">Customers</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">
+                            <i class="icon icon--user-plus"></i>
+                            <span class="navigation__link-name">Create customer</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link navigation__link--active" href="#">
+                            <i class="icon icon--calendar icon--active"></i>
+                            <span class="navigation__link-name">Planning</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container__main">
+            <header class="header">
+
+                <span class="header__title">Globex corporation</span>
+
+                <div class="header__searcher">
+
+                    <form class="searcher">
+
+                        <div class="searcher__input-container form__group">
+                            <label class="form__group-addon" for="search">Search by:</label>
+                            <input class="input form__group-input" id="search" type="text" placeholder="entity, code, customer or country" autocomplete="off"
+                            />
+                        </div>
+
+                        <button class="button searcher__button" type="submit">Advance</button>
+                    </form>
+
+                </div>
+
+
+                <div class="header__user">
+                    <span class="header__user-name">Hi, Jes&uacute;s Mar&iacute;a</span>
+                    <div class="header__user-icon">
+                        <i class="icon icon--inverted icon--user"></i>
+                    </div>
+                </div>
+            </header>
+            <section class="container__page">
+
+                <h1 class="title">History</h1>
+
+                <div class="grid">
+                    <div class="grid__row grid__row--header">
+                        <div class="grid__cell grid__cell--1 grid__cell--sorted grid__cell--sorted-up">Date</div>
+                        <div class="grid__cell grid__cell--2">Event name</div>
+                        <div class="grid__cell grid__cell--1">Customer</div>
+                        <div class="grid__cell grid__cell--2">Where</div>
+                        <div class="grid__cell grid__cell--1">Type</div>
+                    </div>
+                    <div class="grid__row">
+                        <div class="grid__cell grid__cell--1">5/10/2017</div>
+                        <div class="grid__cell grid__cell--2">Encuesta Rangreen</div>
+                        <div class="grid__cell grid__cell--1">Rangreen</div>
+                        <div class="grid__cell grid__cell--2">Calle Ledesma 10, Bilbao</div>
+                        <div class="grid__cell grid__cell--1">Surveys</div>
+                    </div>
+                    <div class="grid__row grid__row--even">
+                        <div class="grid__cell grid__cell--1">13/10/2017</div>
+                        <div class="grid__cell grid__cell--2">Encuesta Ontomedia</div>
+                        <div class="grid__cell grid__cell--1">Ontomedia</div>
+                        <div class="grid__cell grid__cell--2">Calle Nervion 3, Bilbao</div>
+                        <div class="grid__cell grid__cell--1">Surveys</div>
+                    </div>
+                    <div class="grid__row">
+                        <div class="grid__cell grid__cell--1">13/10/2017</div>
+                        <div class="grid__cell grid__cell--2">Visita Luis</div>
+                        <div class="grid__cell grid__cell--1">Betasoloin</div>
+                        <div class="grid__cell grid__cell--2">Calle Ledesma 10, Bilbao</div>
+                        <div class="grid__cell grid__cell--1">Visits</div>
+                    </div>
+                    <div class="grid__row grid__row--even">
+                        <div class="grid__cell grid__cell--1">15/11/2017</div>
+                        <div class="grid__cell grid__cell--2">Visita</div>
+                        <div class="grid__cell grid__cell--1">Ontomedia</div>
+                        <div class="grid__cell grid__cell--2">Calle Nervion 3, Bilbao</div>
+                        <div class="grid__cell grid__cell--1 u-color--main">Pending visiting representative</div>
+                    </div>
+                    <div class="grid__row">
+                        <div class="grid__cell grid__cell--1">18/11/2017</div>
+                        <div class="grid__cell grid__cell--2">Facturar</div>
+                        <div class="grid__cell grid__cell--1">Blackzim</div>
+                        <div class="grid__cell grid__cell--2">Calle Ledesma 10, Bilbao</div>
+                        <div class="grid__cell grid__cell--1">Tasks</div>
+                    </div>
+                    <div class="grid__row grid__row--even">
+                        <div class="grid__cell grid__cell--1">19/11/2017</div>
+                        <div class="grid__cell grid__cell--2">Llamada</div>
+                        <div class="grid__cell grid__cell--1">Blackzim</div>
+                        <div class="grid__cell grid__cell--2">Calle Nervion 3, Bilbao</div>
+                        <div class="grid__cell grid__cell--1">Video call</div>
+                    </div>
+                    <div class="grid__row">
+                        <div class="grid__cell grid__cell--1">20/11/2017</div>
+                        <div class="grid__cell grid__cell--2 u-text--bold">Enviar documentacion</div>
+                        <div class="grid__cell grid__cell--1">Konex</div>
+                        <div class="grid__cell grid__cell--2">Calle Ledesma 10, Bilbao</div>
+                        <div class="grid__cell grid__cell--1">Tasks</div>
+                    </div>
+                    <div class="grid__row grid__row--even">
+                        <div class="grid__cell grid__cell--1">21/11/2017</div>
+                        <div class="grid__cell grid__cell--2">Llamada</div>
+                        <div class="grid__cell grid__cell--1">Konex</div>
+                        <div class="grid__cell grid__cell--2">Calle Ledesma 10, Bilbao</div>
+                        <div class="grid__cell grid__cell--1">Video call</div>
+                    </div>
+                </div>
+                
+                <h2 class="title">Planning</h2>
+
+                <div class="calendar">
+                    <div class="calendar__navigation">
+                        <div class="calendar__navigation-prev">
+                            &lt;
+                        </div>
+                        <div class="calendar__navigation-current">
+                            July 2017
+                        </div>
+                        <div class="calendar__navigation-types">
+                            <button class="calendar__navigation-type calendar__navigation-type--active">Month</button>
+                            <button class="calendar__navigation-type">Week</button>
+                            <button class="calendar__navigation-type">Day</button>
+                        </div>
+                        <div class="calendar__navigation-next">
+                            &gt;
+                        </div>
+                    </div>
+                    <div class="calendar__week-days">
+                        <div class="calendar__week-day"><span class="calendar__day-name">Mon</span></div>
+                        <div class="calendar__week-day"><span class="calendar__day-name">Tue</span></div>
+                        <div class="calendar__week-day"><span class="calendar__day-name">Wed</span></div>
+                        <div class="calendar__week-day"><span class="calendar__day-name">Thu</span></div>
+                        <div class="calendar__week-day"><span class="calendar__day-name">Fri</span></div>
+                        <div class="calendar__week-day"><span class="calendar__day-name">Sat</span></div>
+                        <div class="calendar__week-day"><span class="calendar__day-name">Sun</span></div>
+                    </div>
+
+                    <div class="calendar__week">
+                        <div class="calendar__day calendar__day--previous-page"><span class="calendar__day-number">28</span></div>
+                        <div class="calendar__day calendar__day--previous-page"><span class="calendar__day-number">29</span></div>
+                        <div class="calendar__day calendar__day--previous-page"><span class="calendar__day-number">30</span></div>
+                        <div class="calendar__day calendar__day--previous-page"><span class="calendar__day-number">31</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">1</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">2</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">3</span></div>
+                    </div>
+
+                    <div class="calendar__week">
+                        <div class="calendar__day calendar__day--current"><span class="calendar__day-number">4</span></div>
+                        <div class="calendar__day">
+                            <span class="calendar__day-number">5</span>
+                            <div class="calendar__task">Surveys</div>
+                        </div>
+                        <div class="calendar__day"><span class="calendar__day-number">6</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">7</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">8</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">9</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">10</span></div>
+                    </div>
+
+                    <div class="calendar__week">
+                        <div class="calendar__day"><span class="calendar__day-number">11</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">12</span></div>
+                        <div class="calendar__day">
+                            <span class="calendar__day-number">13</span>
+                            <div class="calendar__task calendar__task--important calendar__task--2days">Visits</div>
+                            <div class="calendar__task">Surveys</div>
+                        </div>
+                        <div class="calendar__day"><span class="calendar__day-number">14</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">15</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">16</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">17</span></div>
+                    </div>
+
+                    <div class="calendar__week">
+                        <div class="calendar__day"><span class="calendar__day-number">18</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">19</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">20</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">21</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">22</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">23</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">24</span></div>
+                    </div>
+
+                    <div class="calendar__week">
+                        <div class="calendar__day"><span class="calendar__day-number">25</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">26</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">27</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">28</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">29</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">30</span></div>
+                        <div class="calendar__day"><span class="calendar__day-number">31</span></div>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

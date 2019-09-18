@@ -1,0 +1,28 @@
+@import '../config/colors';
+
+/*
+
+@styleguide
+
+@title Util - colors
+
+Use the `color` utility classes on any element with text
+
+<span class="u-color--error">error</span>
+
+    <span class="u-color--error">error</span>
+
+<span class="u-color--main">main</span>
+
+    <span class="u-color--main">main</span>
+
+*/
+
+.u-color--error {
+    color: $color-error;
+}
+
+.u-color--main {
+    color: $color-main;
+}
+

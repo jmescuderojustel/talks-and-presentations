@@ -1,0 +1,68 @@
+@import '../config/colors';
+@import '../config/sizes';
+
+/*
+
+@styleguide
+
+@title Block - .tab
+
+Use the tab classes on any element
+
+<ul class="tab">
+    <li class="tab__option tab__option--active">
+        <a class="tab__link" href="#">Info</a>
+    </li>
+    <li class="tab__option">
+        <a class="tab__link" href="#">Contact</a>
+    </li>
+    <li class="tab__option">
+        <a class="tab__link" href="#">Additional info</a>
+    </li>
+</ul>
+
+    <ul class="tab">
+        <li class="tab__option tab__option--active">
+            <a class="tab__link" href="#">Info</a>
+        </li>
+        <li class="tab__option">
+            <a class="tab__link" href="#">Contact</a>
+        </li>
+        <li class="tab__option">
+            <a class="tab__link" href="#">Additional info</a>
+        </li>
+    </ul>
+
+*/
+
+.tab {
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+.tab__option {
+    display: inline-block;
+
+    &--active {
+        border-bottom: 2px solid $color-navigation-active;
+    }
+
+    & + & {
+        margin-left: 20px;
+    }
+}
+
+.tab__link {
+    font-size: 16px;
+    color: $color-navigation-text;
+    text-transform: uppercase;
+
+    &:hover {
+        $hover-color: darken($color-navigation-text, 30%);
+        color: $hover-color;
+    }
+
+    .tab__option--active > & {
+        color: $color-navigation-active;
+    }
+}

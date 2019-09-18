@@ -1,0 +1,157 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body {
+  font-family: Roboto;
+}
+
+.title {
+  font-size: 26px;
+  margin: 20px 2%;
+  background: #035D7B;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #FFFFFF;
+}
+
+.title:hover {
+  background: #023749;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin: 0 2%;
+  background: red;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.subtitle__main {
+  display: block;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.searcher {
+  font-size: 18px;
+  margin: 20px 2% 0;
+  background: #FFBA71;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.searcher__text {
+  border: 1px solid #FF8F19;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.event-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.event {
+  flex-basis: 40%;
+  padding: 20px 3%;
+  margin: 20px 2%;
+  border-radius: 10px;
+}
+
+.event--1 {
+  background: #5BEC8C;
+}
+
+.event--2 {
+  background: #5DC2E4;
+}
+
+.event--3 {
+  background: #FFB262;
+}
+
+.event--4 {
+  background: #FF7A62;
+}
+
+.event--5 {
+  background: #14D254;
+}
+
+.event__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.event__speaker {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+.event__timetable {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.event__timetable::before {
+  content: '@';
+}
+
+.event__text {
+  margin: 10px 0;
+  text-align: justify;
+  font-style: italic;
+}
+
+.back {
+  font-size: 12px;
+  font-style: italic;
+  margin: 0 2%;
+  display: block;
+  width: 96%;
+  text-align: right;
+}
+
+.back::before {
+  content: '◀';
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+  .searcher__label {
+    display: block;
+    width: 100%;
+  }
+  .searcher__text {
+    width: 100%;
+  }
+  .event {
+    flex-basis: 90%;
+    padding: 20px 3%;
+    margin: 20px 2%;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .searcher__label {
+    display: block;
+    width: 100%;
+  }
+  .searcher__text {
+    width: 100%;
+  }
+  .event {
+    flex-basis: 90%;
+    padding: 20px 3%;
+    margin: 20px 2%;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../config/colors';
+@import '../config/sizes';
+@import '../config/other';
+
+.searcher {
+    display: flex;
+    padding: 14px;
+    color: $color-text;
+}
+
+.searcher__select {
+    display: inline-block;
+    width: 200px;
+    height: $size-vertical-line-height;
+    margin-right: 20px;
+    background: 0;
+    border: 0;
+}
+
+.searcher__input-container {
+    display: flex;
+    height: $size-vertical-line-height;
+    margin-right: 20px;
+    flex: 1 1 auto;
+}
+
+.searcher__button {
+    margin-right: 20px;
+}

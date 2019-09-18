@@ -1,0 +1,112 @@
+@import '../config/colors';
+@import '../config/other';
+@import '../config/sizes';
+
+/*
+
+@styleguide
+
+@title Block - .input
+
+Use the input class on `input's` element.
+
+<input type="text" class="input" placeholder="placeholder">
+
+    <input type="text" class="input" placeholder="placeholder">
+
+<input type="text" class="input" value="filled">
+
+    <input type="text" class="input" value="filled">
+
+<input type="text" class="input input--error" value="error">
+
+    <input type="text" class="input input--error" value="error">
+
+<select class="input">
+    <option>option a</option>
+    <option>option b</option>
+</select>
+
+    <select class="input">
+        <option>option a</option>
+        <option>option b</option>
+    </select>
+
+<select class="input input--error">
+    <option>option a</option>
+    <option>option b</option>
+</select>
+
+    <select class="input input--error">
+        <option>option a</option>
+        <option>option b</option>
+    </select>
+
+*/
+
+.input {
+    padding: 10px 15px;
+    font-weight: 400;
+    color: $color-input-text;
+    background: $color-input-backgroud;
+    border: $border;
+    border-radius: $border-radius;
+
+    &--error {
+        color: $color-input-error;
+        border-color: $color-input-error;
+    }
+
+    &[disabled] {
+        opacity: $disabled-opacity;
+    }
+
+    &:focus {
+        outline: 0;
+
+        &:not(&--error) {
+            $focus-boder-color: darken($color-border, 15%);
+            border-color: $focus-boder-color;
+            outline: 0;
+        }
+    }
+
+    &::placeholder {
+        font-style: italic;
+        color: $color-input-placeholder;
+    }
+}
+
+select {
+    &.input {
+        // sass-lint:disable-block no-vendor-prefixes
+        min-width: 200px;
+        padding-right: 32px;
+        cursor: pointer;
+        background: $color-input-backgroud url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAh0lEQVQYlW3NKw7CQBiF0VNeAgQrweIxKFaAYAedTh27IO0SEFgMCsOucORHQSbQm3zuJFdEqFOeRISh6pRnEaGqUz5ii13fnZ6KpaZd4o7rCCtscEtNOx9Aa6yqOuUxztjjgR2mBbrgUEWE1LS/eFGivju9qoj4XJVYieALf7AS/cECKxG8AXf9ToqmuDzdAAAAAElFTkSuQmCC') no-repeat;
+        background-position: right 10px center;
+        outline: none;
+
+        // Disable default styling on ff
+        appearance: none;
+
+        // Disable default styling on webkit browsers 
+        -webkit-appearance: none;
+
+        &--error {
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAiElEQVQYlW3NrQ3CUBiF4efyJ0CwQTsBrUODQXUCBHMwDwKLQWFuV+gILIEjHwpyA5zkdU9yRIRcNZOI8K9cNbOIkHLVHLFDt7kPD8X6ul3ihssIK2xx7et2/getsUq5asY4YY+MDtMCnXFIEaGv22+8KNHmPjxTRLyvSqxE8IFfWIl+YIGVCF7mV00KG9tIeAAAAABJRU5ErkJggg==');
+        }
+
+        // Disable outline on firefox 
+        &:-moz-focusring {
+            $transparent-color: transparent;
+            color: $transparent-color;
+            text-shadow: none;
+        }
+
+        // Disable default arrow on IE 11+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+}

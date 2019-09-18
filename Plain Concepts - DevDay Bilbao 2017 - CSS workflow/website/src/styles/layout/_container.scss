@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.container__navigation {
+    width: $size-navigation-width;
+}
+
+.container__main {
+    display: flex;
+    overflow: auto;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.container__page {
+    padding: 27px 15% 20px;
+    background: $color-page;
+    flex: 1;
+}
+
+@media only screen and (max-width: 1280px) {
+    
+    .container__navigation {
+        width: 200px;
+    }
+
+    .container__page {
+        padding: 12px 5% 10px;        
+    }
+
+}

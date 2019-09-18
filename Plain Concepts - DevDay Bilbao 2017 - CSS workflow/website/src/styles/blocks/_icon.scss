@@ -1,0 +1,93 @@
+@import '../config/icons';
+@import '../config/colors';
+@import '../functions/icon-mixins';
+
+/*
+
+@styleguide
+
+@title Block - .icon
+
+Use the icon class on `i` element.
+
+<style>
+    .icon {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+</style>
+
+<i class="icon icon--menu"></i>
+
+	<i class="icon icon--menu"></i>
+
+<i class="icon icon--user"></i>
+
+	<i class="icon icon--user"></i>
+
+<i class="icon icon--address-book"></i>
+
+	<i class="icon icon--address-book"></i>
+
+<i class="icon icon--calendar"></i>
+
+	<i class="icon icon--calendar"></i>
+
+<i class="icon icon--user-plus"></i>
+
+    <i class="icon icon--user-plus"></i>
+
+<i class="icon icon--equalizer"></i>
+
+	<i class="icon icon--equalizer"></i>
+*/
+
+.icon {
+    @include icon;
+    color: $color-icon;
+
+    &--inverted {
+        color: $color-button-text;
+    }
+
+    &--active {
+        color: $color-active;
+    }
+}
+
+.icon--user {
+    &::before {
+        content: $icon--user;
+    }
+}
+
+.icon--menu {
+    &::before {
+        content: $icon--menu;
+    }
+}
+
+.icon--address-book {
+    &::before {
+        content: $icon--address-book;
+    }
+}
+
+.icon--calendar {
+    &::before {
+        content: $icon--calendar;
+    }
+}
+
+.icon--user-plus {
+    &::before {
+        content: $icon--user-plus;
+    }
+}
+
+.icon--equalizer {
+    &::before {
+        content: $icon--equalizer;
+    }
+}

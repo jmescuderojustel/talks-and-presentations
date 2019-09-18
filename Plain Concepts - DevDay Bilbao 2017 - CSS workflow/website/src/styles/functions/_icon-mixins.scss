@@ -1,0 +1,13 @@
+@import '../config/sizes';
+
+@mixin icon {
+    width: $size-icons;
+    font-family: 'cssworkflow';
+    font-size: $size-icons;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-transform: none;
+    speak: none;
+    font-variant: normal;
+}

@@ -1,0 +1,30 @@
+@import '../config/colors';
+@import '../config/sizes';
+
+.form__label {
+    font-size: $size-form-label-font;
+}
+
+.form__group-addon {
+    display: block;
+    height: $size-vertical-line-height;
+    padding: 7px 0 5px 5px;
+    color: $color-input-addon;
+    white-space: nowrap;
+    background: $color-input-backgroud;
+    border-top: $border;
+    border-bottom: $border;
+    border-left: $border;
+    border-bottom-left-radius: $border-radius;
+    border-top-left-radius: $border-radius;    
+}
+
+.form__group-input {
+    display: block;
+    height: $size-vertical-line-height;
+    padding: 0 5px;
+    border-left: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    flex: auto;
+}

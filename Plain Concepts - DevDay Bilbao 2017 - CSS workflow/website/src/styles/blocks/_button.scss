@@ -1,0 +1,53 @@
+@import '../config/other';
+@import '../config/sizes';
+@import '../config/colors';
+
+/*
+
+@styleguide
+
+@title Block - .button
+
+Use the button classes on and `<a>`, `<button>`, `<input type="button">` elements.
+
+<button class="button">button</button>
+
+    <button class="button">button</button>
+
+<button class="button" disabled>button disabled</button>
+
+    <button class="button" disabled>button disabled</button>
+
+<button class="button">
+    <i class="button__icon icon icon--close"></i>cancel
+</button>
+
+    <button class="button">
+        <i class="button__icon icon icon--close"></i>cancel
+    </button>
+
+*/
+
+.button {
+    display: inline-block;
+    height: 30px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color-button-text;
+    background: $color-button;
+    border: 0;
+    border-radius: $border-radius;
+
+    &[disabled] {
+        opacity: $disabled-opacity;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:active {
+        background: darken($color: $color-button, $amount: 30%);
+    }
+}
