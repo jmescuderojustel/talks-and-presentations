@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PokemonLeague.Tests.Helpers;
+using System.Collections.Generic;
 using Xunit;
 
 namespace PokemonLeague.Tests
@@ -8,19 +9,8 @@ namespace PokemonLeague.Tests
         [Fact]
         public void CharmanderFightAgainstPikatxu()
         {
-            var charmander = new Pokemon
-            {
-                Name = "Charmander",
-                Life = 100,
-                Strength = 20
-            };
-
-            var pikatxu = new Pokemon
-            {
-                Name = "Pikatxu",
-                Life = 80,
-                Strength = 15
-            };
+            var charmander = PokemonFakeBuilder.Build("Charmander", 20, 100);
+            var pikatxu = PokemonFakeBuilder.Build("Pikatxu", 15, 80);
 
             charmander.FightAgainst(pikatxu);
 
@@ -31,19 +21,8 @@ namespace PokemonLeague.Tests
         [Fact]
         public void CharizardFightAgainstSquirtle()
         {
-            var charizard = new Pokemon
-            {
-                Name = "Charizard",
-                Life = 90,
-                Strength = 40
-            };
-
-            var squirtle = new Pokemon
-            {
-                Name = "Squirtle",
-                Life = 90,
-                Strength = 10
-            };
+            var charizard = PokemonFakeBuilder.Build("Charizard", 40, 90);
+            var squirtle = PokemonFakeBuilder.Build("Squirtle", 10, 90);
 
             charizard.FightAgainst(squirtle);
 
@@ -56,19 +35,8 @@ namespace PokemonLeague.Tests
         [InlineData("Charizard", "Squirtle", 90, 40, 90, 10, 80, 50)]
         public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf(string pokemon1Name, string pokemon2Name, int pokemon1Life, int pokemon1Strength, int pokemon2Life, int pokemon2Strength, int pokemon1ExpectedLife, int pokemon2ExcpectedLife)
         {
-            var pokemon1 = new Pokemon
-            {
-                Name = pokemon1Name,
-                Life = pokemon1Life,
-                Strength = pokemon1Strength
-            };
-
-            var pokemon2 = new Pokemon
-            {
-                Name = pokemon2Name,
-                Life = pokemon2Life,
-                Strength = pokemon2Strength
-            };
+            var pokemon1 = PokemonFakeBuilder.Build(pokemon1Name, pokemon1Strength, pokemon1Life);
+            var pokemon2 = PokemonFakeBuilder.Build(pokemon2Name, pokemon2Strength, pokemon2Life);
 
             pokemon1.FightAgainst(pokemon2);
 
@@ -101,35 +69,15 @@ namespace PokemonLeague.Tests
             {
                 new object[]
                 {
-                    new Pokemon
-                    {
-                        Name = "Charmander",
-                        Life = 100,
-                        Strength = 20
-                    },
-                    new Pokemon
-                    {
-                        Name = "Pikatxu",
-                        Life = 80,
-                        Strength = 15
-                    },
+                    PokemonFakeBuilder.Build("Charmander", 20, 100),
+                    PokemonFakeBuilder.Build("Pikatxu", 15, 80),
                     85,
                     60
                 },
                 new object[]
                 {
-                    new Pokemon
-                    {
-                        Name = "Charizard",
-                        Life = 90,
-                        Strength = 40
-                    },
-                    new Pokemon
-                    {
-                        Name = "Squirtle",
-                        Life = 90,
-                        Strength = 10
-                    },
+                    PokemonFakeBuilder.Build("Charizard", 40, 90),
+                    PokemonFakeBuilder.Build("Squirtle", 10, 90),
                     80,
                     50
                 }
