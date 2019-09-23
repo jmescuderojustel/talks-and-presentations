@@ -1,13 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace PokemonLeague.Tests
+namespace PokemonLeague.Tests.Helpers
 {
-    public class TestDataGenerator : IEnumerable<object[]>
+    public static class MemberDataHelper
     {
-        private readonly List<object[]> _data  =
-           new List<object[]>
-           {
+        public static IEnumerable<object[]> Data =>
+            new List<object[]>
+            {
                 new object[]
                 {
                     new Pokemon("Charmander", 20, 100),
@@ -22,9 +21,6 @@ namespace PokemonLeague.Tests
                     80,
                     50
                 }
-           };
-        public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
-
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+            };
     }
 }

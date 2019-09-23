@@ -1,0 +1,10 @@
+Introducción
+	xUnit Jesús María
+	Fact Jesús María
+Theory
+	InlineData Ander Conal
+	ClassData -> Parecido pero con una clase Jesús María (aquí no se pueden pasar parámetros) Ander Conal
+	MemberData Ander Conal
+		Pasar parámetros a MemberData (ejemplo en KiroFill)
+	TheoryData Jesús María
+		Aplicado a ClassData y MemberData
