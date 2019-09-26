@@ -16,7 +16,6 @@
         public void FightAgainst(Pokemon otherPokemon)
         {
             otherPokemon.Life -= Strength;
-            Life -= otherPokemon.Strength;
         }
     }
 }
