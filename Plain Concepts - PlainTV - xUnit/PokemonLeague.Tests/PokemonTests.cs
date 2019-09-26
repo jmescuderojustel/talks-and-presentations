@@ -68,6 +68,15 @@ namespace PokemonLeague.Tests
             Assert.Equal(pokemon2ExpectedLife, pokemon2.Life);
         }
 
+        [Theory]
+        [ClassData(typeof(PokemonTestData))]
+        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf_TestData(Pokemon pokemon1, Pokemon pokemon2, int pokemon2ExpectedLife)
+        {
+            pokemon1.FightAgainst(pokemon2);
+
+            Assert.Equal(pokemon2ExpectedLife, pokemon2.Life);
+        }
+
         public static IEnumerable<object[]> Data =>
             new List<object[]>
             {

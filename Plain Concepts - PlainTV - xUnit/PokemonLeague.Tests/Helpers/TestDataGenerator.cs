@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace PokemonLeague.Tests
+namespace PokemonLeague.Tests.Helpers
 {
     public class TestDataGenerator : IEnumerable<object[]>
     {
-        private readonly List<object[]> _data  =
+        private readonly List<object[]> _data =
            new List<object[]>
            {
                 new object[]
@@ -21,6 +21,7 @@ namespace PokemonLeague.Tests
                     50
                 }
            };
+
         public IEnumerator<object[]> GetEnumerator() => _data.GetEnumerator();
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

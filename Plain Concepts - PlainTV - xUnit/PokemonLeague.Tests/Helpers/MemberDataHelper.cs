@@ -11,14 +11,12 @@ namespace PokemonLeague.Tests.Helpers
                 {
                     new Pokemon("Charmander", 20, 100),
                     new Pokemon("Pikatxu", 15, 80),
-                    85,
                     60
                 },
                 new object[]
                 {
                     new Pokemon("Charizard", 40, 90),
                     new Pokemon("Squirtle", 10, 90),
-                    80,
                     50
                 }
             };
