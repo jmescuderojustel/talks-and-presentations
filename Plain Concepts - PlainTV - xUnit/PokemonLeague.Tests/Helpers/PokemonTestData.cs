@@ -6,13 +6,14 @@ namespace PokemonLeague.Tests.Helpers
     {
         public PokemonTestData()
         {
-            var charmander = new Pokemon("Charmander", 20, 100);
-            var pikatxu = new Pokemon("Pikatxu", 15, 80);
-            var charizard = new Pokemon("Charizard", 40, 90);
-            var squirtle = new Pokemon("Squirtle", 10, 90);
-
-            Add(charmander, pikatxu, 60);
-            Add(charizard, squirtle, 50);
+            Add(
+                new Pokemon("Charmander", 20, 100),
+                new Pokemon("Pikatxu", 15, 80),
+                60);
+            Add(
+                new Pokemon("Charizard", 40, 90),
+                new Pokemon("Squirtle", 10, 90),
+                50);
         }
     }
 }
