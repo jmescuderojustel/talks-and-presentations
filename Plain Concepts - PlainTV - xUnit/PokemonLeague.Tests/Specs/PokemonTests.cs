@@ -30,7 +30,9 @@ namespace PokemonLeague.Tests.Specs
 
         [Theory]
         [InlineData("Charmander", "Pikatxu", 100, 20, 80, 15, 60)]
+        [InlineData("Pikatxu", "Charmander", 80, 15, 100, 20, 85)]
         [InlineData("Charizard", "Squirtle", 90, 40, 90, 10, 50)]
+        [InlineData("Squirtle", "Charizard", 90, 10, 90, 40, 80)]
         public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf(string pokemon1Name, string pokemon2Name, int pokemon1Life, int pokemon1Strength, int pokemon2Life, int pokemon2Strength, int pokemon2ExcpectedLife)
         {
             var pokemon1 = new Pokemon(pokemon1Name, pokemon1Strength, pokemon1Life);
