@@ -33,7 +33,8 @@ namespace PokemonLeague.Tests.Specs
         [InlineData("Pikatxu", "Charmander", 80, 15, 100, 20, 85)]
         [InlineData("Charizard", "Squirtle", 90, 40, 90, 10, 50)]
         [InlineData("Squirtle", "Charizard", 90, 10, 90, 40, 80)]
-        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf(string pokemon1Name, string pokemon2Name, int pokemon1Life, int pokemon1Strength, int pokemon2Life, int pokemon2Strength, int pokemon2ExcpectedLife)
+        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf(string pokemon1Name, string pokemon2Name,
+            int pokemon1Life, int pokemon1Strength, int pokemon2Life, int pokemon2Strength, int pokemon2ExcpectedLife)
         {
             var pokemon1 = new Pokemon(pokemon1Name, pokemon1Strength, pokemon1Life);
             var pokemon2 = new Pokemon(pokemon2Name, pokemon2Strength, pokemon2Life);
@@ -44,17 +45,20 @@ namespace PokemonLeague.Tests.Specs
         }
 
         [Theory]
-        [ClassData(typeof(TestDataGenerator))]
-        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf_ClassData(Pokemon pokemon1, Pokemon pokemon2, int pokemon2ExpectedLife)
+        [MemberData(nameof(Data))]
+        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf_MemberData(Pokemon pokemon1, Pokemon pokemon2,
+            int pokemon2ExpectedLife)
         {
             pokemon1.FightAgainst(pokemon2);
 
             Assert.Equal(pokemon2ExpectedLife, pokemon2.Life);
         }
+
 
         [Theory]
         [MemberData(nameof(MemberDataHelper.Data))]
-        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf_MemberData_WithHelper(Pokemon pokemon1, Pokemon pokemon2, int pokemon2ExpectedLife)
+        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf_MemberData_WithHelper(Pokemon pokemon1,
+            Pokemon pokemon2, int pokemon2ExpectedLife)
         {
             pokemon1.FightAgainst(pokemon2);
 
@@ -62,8 +66,9 @@ namespace PokemonLeague.Tests.Specs
         }
 
         [Theory]
-        [MemberData(nameof(Data))]
-        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf_MemberData(Pokemon pokemon1, Pokemon pokemon2, int pokemon2ExpectedLife)
+        [ClassData(typeof(TestDataGenerator))]
+        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf_ClassData(Pokemon pokemon1, Pokemon pokemon2,
+            int pokemon2ExpectedLife)
         {
             pokemon1.FightAgainst(pokemon2);
 
@@ -72,7 +77,8 @@ namespace PokemonLeague.Tests.Specs
 
         [Theory]
         [ClassData(typeof(PokemonTestData))]
-        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf_TestData(Pokemon pokemon1, Pokemon pokemon2, int pokemon2ExpectedLife)
+        public void FightAgainst_ShouldWeakenTheAdversaryAndOneSelf_TestData(Pokemon pokemon1, Pokemon pokemon2,
+            int pokemon2ExpectedLife)
         {
             pokemon1.FightAgainst(pokemon2);
 
