@@ -36,7 +36,7 @@
     "cpx": "1.5.0",
     "cssmin": "0.4.3",
     "mkdirp": "0.5.1",
-    "node-sass": "4.5.3",
+    "node-sass": "4.14.1",
     "onchange": "3.2.1",
     "postcss-cli": "4.1.1",
     "postcss-style-guide": "jmescuderojustel/postcss-style-guide",
